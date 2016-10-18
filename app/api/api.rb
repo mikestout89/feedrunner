@@ -5,5 +5,5 @@ class API < Grape::API
 
   # load remaining API endpoints
   mount Endpoints::Accounts
-  mount Endpoints::Feed
+  mount Endpoints::Feeds
 end
