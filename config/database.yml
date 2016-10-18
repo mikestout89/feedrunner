@@ -50,5 +50,9 @@ test:
 production:
   <<: *default
   database: feedrunner_production
-  username: root
+  username: feedrunner
   password: <%= ENV['FEEDRUNNER_DATABASE_PASSWORD'] %>
+
+
+# CREATE USER 'feedrunner'@'localhost' IDENTIFIED BY 'feedrunner123';
+# GRANT ALL PRIVILEGES ON * . * TO 'feedrunner'@'localhost';
