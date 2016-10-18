@@ -46,3 +46,6 @@ pid "#{shared_dir}/pids/unicorn.pid"
 # keepalive_timeout 10;
 # }
 #
+
+# sudo fuser -k 80/tcp
+# service nginx restart
