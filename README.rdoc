@@ -19,4 +19,4 @@
       -F "email=tester@email.com" \
       -F "ip=128.128.15.101" \
       -F "category=Fianance" \
-      http://localhost:3000/api/v1/feeds
+      http://192.254.218.248//api/v1/feeds

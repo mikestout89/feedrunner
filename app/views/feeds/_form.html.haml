@@ -1,0 +1,25 @@
+.row
+  .col-lg-12.col-md-6
+    .card-form-wrap
+      = form_for @feed, html:{"data-plugin" => "card", "data-target" => "#cardContainer", class: "card-register"} do |f|
+        - if @feed.errors.any?
+          %ul
+            - @feed.errors.full_messages.each do |msg|
+              %li= msg
+        .form-group
+          %label.control-label.margin-bottom-15{:for => "feed_email"} Email
+          = f.email_field :email, placeholder: "Email", class: "form-control"
+        .form-group
+          %label.control-label.margin-bottom-15{:for => "feed_first_name"} First Name
+          = f.text_field :first_name, placeholder: "Address", class: "form-control"
+        .form-group
+          %label.control-label.margin-bottom-15{:for => "feed_last_name"} Last Name
+          = f.text_field :last_name, placeholder: "Last Name", class: "form-control"
+        .form-group
+          %label.control-label.margin-bottom-15{:for => "feed_ip"} IP
+          = f.text_field :ip, placeholder: "IP Address ", class: "form-control"
+        .form-group
+          %label.control-label.margin-bottom-15{:for => "feed_category"} Category
+          = f.text_field :category, placeholder: "Category", class: "form-control"
+        .form-group
+          = f.submit "Save", class: "btn btn-primary"

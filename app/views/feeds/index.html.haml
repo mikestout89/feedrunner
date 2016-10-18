@@ -1,0 +1,29 @@
+.row
+  .col-sm-12{style: "padding: 30px 50px;"}
+    .panel.panel-bordered.cards-page
+      .panel-heading
+        %h3.panel-title Feeds
+      .panel-body
+        = link_to "New Feed", new_feed_path, class: "btn btn-primary"
+        %table.table.table-bordered.dataTable.table-striped.width-full{"data-plugin": "dataTable"}
+          %thead
+            %tr
+              %th Email
+              %th First Name
+              %th Last Name
+              %th IP
+              %th Category
+              %th.text-nowrap Actions
+          %tbody
+            -@feeds.each do |feed|
+              %tr
+                %td= feed.email
+                %td= feed.first_name
+                %td= feed.last_name
+                %td= feed.ip
+                %td= feed.category
+                %td.text-nowrap
+                  = link_to edit_feed_path(feed), "data-original-title" => "Edit", "data-toggle" => "tooltip" do
+                    %i.glyphicon.glyphicon-edit{"aria-hidden" => "true"}
+                  = link_to feed_path(feed), method: :delete, data: { confirm: 'Are you sure?' } do
+                    %i.glyphicon.glyphicon-trash{"aria-hidden" => "true"}
