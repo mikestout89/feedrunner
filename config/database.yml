@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: feedrunner_production
-  username: feedrunner
+  username: root
   password: <%= ENV['FEEDRUNNER_DATABASE_PASSWORD'] %>
