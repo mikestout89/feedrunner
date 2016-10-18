@@ -42,13 +42,15 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
-gem 'devise'
-gem 'devise-bootstrap-views'
+gem 'devise' # for user authentication
+gem 'devise-bootstrap-views' #for bootstrap devise form
 
-gem 'unicorn'
-gem 'figaro'
+gem 'unicorn' #for unicorn server
+gem 'figaro' # for environment variables
 
-gem 'bootstrap_form'
+gem 'bootstrap_form' # for bootstrap form
+
+gem 'rest-client' # for send http request
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

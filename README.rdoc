@@ -14,9 +14,9 @@
       {status: 1, data: posted successfully}
 
     curl \
-      -F "first_name=tester1" \
-      -F "last_name=lname" \
-      -F "email=tester@email.com" \
+      -F "first_name=tester4" \
+      -F "last_name=name" \
+      -F "email=teste4@email.com" \
       -F "ip=128.128.15.101" \
       -F "category=Fianance" \
-      http://192.254.218.248//api/v1/feeds
+      http://localhost:3000/api/v1/feeds
