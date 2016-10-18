@@ -49,10 +49,10 @@ test:
 #
 production:
   <<: *default
-  socket: /var/run/mysqld/mysqld.sock  
+  socket: /var/run/mysqld/mysqld.sock
   database: feedrunner_production
   username: feedrunner
-  password: <%= ENV['FEEDRUNNER_DATABASE_PASSWORD'] %>
+  password: feedrunner123
 
 
 # CREATE USER 'feedrunner'@'localhost' IDENTIFIED BY 'feedrunner123';
